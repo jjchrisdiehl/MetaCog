@@ -1,0 +1,152 @@
+/**
+ * Bootstrap - Lil' B
+ * Helpers
+ */
+
+/**
+ * Helper Classes
+ * @additional
+ * @helper
+ */
+
+
+/**
+ * .col-solo
+ * This is designed to be added to "column" sized elements where you wish to have
+ * a desired size (e.g. col-md-8 for width of 66.6667%), but you don't it to float
+ * or to have any elements next to it.
+ *
+ * This is useful for single-page type layouts where content blocks need to
+ * be slightly narrower instead of col-md-12 or container width
+ * (default-max 1170px)
+ *
+ * Example:
+ * <div class="container">
+ *     <div class="col-md-8 col-solo">
+ *         Content here
+ *     </div>
+ * </div>
+ */
+
+.col-solo {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**
+ * .flex-video
+ * This helper class allows for video embeds to be responsive. Just add your video embed inside of a parent .flex-video div.
+ *
+ * Most videos these days have a 16:9 (HD) ratio. If your video embed is of a 4:3 (SD) ratio, add .sd along with the .flex-video class.
+ *
+ * High-Depth ratio videos (16:9)
+ * <div class="flex-video">
+ *     * Insert video embed here *
+ * </div>
+ *
+ * Standard-Depth ratio videos (4:3)
+ * <div class="flex-video.sd">
+ *     * Insert video embed here *
+ * </div>
+ *
+ * This helper was inspired by the .flex-video helper found in Foundation:
+ * @source: http://foundation.zurb.com/docs/components/flex_video.html
+ */
+
+.flex-video {
+    height: 0;
+    margin-bottom: 1.5em;
+    overflow: hidden;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.flex-video embed,
+.flex-video iframe,
+.flex-video object,
+.flex-video video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.flex-video.sd {
+    padding-top: 75%;
+}
+
+
+/**
+ * .fixed-z
+ * This helper class adds the "translateZ" hack for selectors that are set
+ * as position: fixed to help prevent brower repaints on browser scrolls/resize.
+ */
+
+.fixed-z {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/**
+ * .no-select
+ * This helper class disables selection for selectors. This is handy for
+ * navigations, links, headers, buttons, etc..
+ */
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/**
+ * .text-lowercase
+ * This helper class transforms the text within to all lowercase.
+ */
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+/**
+ * .text-uppercase
+ * This helper class transforms the text within to all uppercase / uppercase.
+ */
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/**
+ * .v-center
+ * This helper class helps vertically align elements.
+ * In order to get .v-center to work properly, you have to have a child
+ * .v-center within the parent .v-center-wrap selector.
+ *
+ * It is recommended that you add some sort of height to your .v-center selector
+ * to get the desired effect.
+ *
+ * Example:
+ * <div class="v-center-wrap text-center">
+ *     <div class="v-center">
+ *         <h3>I'm vertically aligned!</h3>
+ *     </div>
+ * </div>
+ *
+ */
+
+.v-center-wrap {
+    display: table;
+    width: 100%;
+}
+
+.v-center {
+    display: table-cell;
+    vertical-align: middle;
+}
